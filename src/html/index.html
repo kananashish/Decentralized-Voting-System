@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Voting Page - Decentralized Voting</title>
+  <link rel="stylesheet" type="text/css" href="../css/index.css">
+</head>
+<body>
+  <canvas id="blockchain-background"></canvas>
+  
+  <div class="content-wrapper">
+    <div class="container">
+      <div id="head" class="text-center">
+        <h1>Decentralized Voting</h1>
+        <h2>Using Ethereum Blockchain</h2>
+        <h3>Voting Period: <span id="dates">Loading...</span></h3>
+      </div>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Party</th>
+            <th>Total Votes</th>
+          </tr>
+        </thead>
+        <tbody id="boxCandidate">
+          <!-- Candidate rows will be injected here by JavaScript -->
+        </tbody>
+      </table>
+
+      <div id="vote-section">
+        <p>Select a candidate from the list and cast your vote.</p>
+        <button id="voteButton" onclick="App.vote()" disabled>Vote</button>
+        <div id="msg"></div>
+      </div>
+
+      <div id="account">
+        <p id="accountAddress" class="text-center">Connecting to your account...</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="../dist/app.bundle.js" type="module"></script>
+  <script src="../js/background.js"></script>
+  <script src="../js/feedback.js"></script>
+</body>
+</html>

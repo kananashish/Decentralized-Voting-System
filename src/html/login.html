@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login - Decentralized Voting</title>
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
+</head>
+<body>
+    <canvas id="blockchain-background"></canvas>
+
+    <main class="content-wrapper">
+        <div id="head">
+            <h1>Decentralized Voting Using Ethereum Blockchain</h1>
+        </div>
+
+        <div class="container">
+            <legend>Login</legend>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="voter-id" class="form-label">Voter ID</label>
+                    <input type="text" class="form-input" id="voter-id" name="voter-id" placeholder="Enter your Voter ID" required>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-input" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="login-button"><b>Login</b></button>
+            </form>
+        </div>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="../js/login.js" type="module"></script>
+    <script src="../js/background.js"></script>
+    <script src="../js/feedback.js"></script>
+</body>
+</html>

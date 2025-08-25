@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal - Decentralized Voting</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/datepicker.css">
+</head>
+<body>
+    <canvas id="blockchain-background"></canvas>
+    
+    <div class="content-wrapper">
+        <header id="head">
+            <h1>Decentralized Voting Using Ethereum Blockchain</h1>
+        </header>
+
+        <main class="main-content">
+            <section class="container">
+                <legend>Add Candidate</legend>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Candidate's Name</label>
+                        <input id="name" type="text" class="form-input" placeholder="e.g., John Doe" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label for="party" class="form-label">Candidate's Party</label>
+                        <input id="party" type="text" class="form-input" placeholder="e.g., Independence Party">
+                    </div>
+                </div>
+                <button id="addCandidate" class="submit-btn">Add Candidate</button>
+                <p id="candidate-status" class="status-message"></p>
+            </section>
+
+            <section class="container">
+                <legend>Define Voting Dates</legend>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="startDate" class="form-label">Start Date</label>
+                        <div class="date-picker-container">
+                            <input id="startDate" type="text" class="form-input date-picker-input" placeholder="Select a date">
+                            <div class="calendar-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="endDate" class="form-label">End Date</label>
+                         <div class="date-picker-container">
+                            <input id="endDate" type="text" class="form-input date-picker-input" placeholder="Select a date">
+                            <div class="calendar-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button id="addDate" class="submit-btn">Define Dates</button>
+                <p id="date-status" class="status-message"></p>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="../dist/app.bundle.js" type="module"></script>
+    <script src="../js/background.js"></script>
+    <script src="../js/feedback.js"></script>
+    <script src="../js/datepicker.js"></script>
+</body>
+</html>
